@@ -139,7 +139,7 @@ async function submit() {
   renderResults({ paper: state.paper, result, config, onRetake: retake, onBack: backToIntro });
   proctor.hidePreview();
   proctor.stopCamera();
-  if (result.passed) celebration.play(4500);
+  if (result.passed) celebration.play();
 
   try {
     await submitResult(config.name, student, result, proctor.summary());
